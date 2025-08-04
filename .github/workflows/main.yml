@@ -12,12 +12,9 @@ on:
 # 🔥 关键修改：增加 workflows 权限
 permissions:
   contents: write  # 允许修改代码
-  workflows: write  # 允许修改工作流文件
 
 jobs:
   push:
-    paths-ignore:
-        - ".github/workflows/**"  # 忽略对工作流文件的修改
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
